@@ -20,10 +20,10 @@ while True:
         console.print('[yellow] Downloading ...')
         for video in yt.videos:
             console.print(f'[green] Downloading [yellow]{video.title} ...')
-            # video.streams.get_by_itag(251).download('./download')
+            video.streams.get_by_itag(251).download('./download')
             # webbrowser.BackgroundBrowser.open(url=video.streams.get_by_itag(251).url)
             # Download("hello" , video.streams.get_by_itag(251).url)
-            subprocess.run([f'C:\Program Files (x86)\Internet Download Manager\IDMan.exe' , '/n' ,'/d' , video.streams.get_by_itag(251).url])
+            # subprocess.run([f'C:\Program Files (x86)\Internet Download Manager\IDMan.exe' , '/n' ,'/d' , video.streams.get_by_itag(251).url])
             console.print('[blue]Downloaded !')
     except KeyError:
         console.print("[red bold]this link dosen't providing any playlist !!!")
